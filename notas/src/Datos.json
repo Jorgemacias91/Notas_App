@@ -1,0 +1,25 @@
+{
+    "todos":[
+        {
+            "title" : "tarea 1",
+            "responsible": "persona 1",
+            "description" : "description 1",
+            "priority" : "low"
+
+        },
+        {
+            "title" : "tarea 2",
+            "responsible": "persona 2",
+            "description" : "description 2",
+            "priority" : "medium"
+
+        },
+        {
+            "title" : "tarea 3",
+            "responsible": "persona 3",
+            "description" : "description 3",
+            "priority" : "higth"
+
+        }
+    ]
+}
