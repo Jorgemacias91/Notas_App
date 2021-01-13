@@ -30,7 +30,7 @@ removeTodo(index){
   if(window.confirm("Estas seguro de eliminar la tarea?")){
     this.setState({
       todos : this.state.todos.filter((e,i) => {
-        return i !== index
+        return i != index
       })
     })
   }
