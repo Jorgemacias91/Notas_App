@@ -1,10 +1,11 @@
+
 import React from 'react'
 
-class Todos extends React.Component{
-    render(){
-        const todos = this.props.status.map((todo,i) => {
+function Todos({status, remove}){
+   
+        const todos = status.map((todo,i) => {
             return(
-                <div className="col-md-4 mt-4">
+                <div className="col-md-4 mt-4" key={i}>
                 <div className="card">
                     
                     <div className="card-header">
@@ -18,12 +19,11 @@ class Todos extends React.Component{
                     </div>
 
                     <div className="card-footer">
-                        <button
-                         className="bg-danger text-white"
-                         onClick={this.props.remover.bind(this, i)}
-                          >
-                              Eliminar
-                        </button>
+                        <button  className="bg-danger text-white"
+                        onClick={() => remove(i)}
+                         >
+                           Eliminar
+                         </button>
                     </div>
                     </div>
                     
@@ -42,7 +42,7 @@ class Todos extends React.Component{
 
         )
     }
-}
+
 
 
 export default Todos;

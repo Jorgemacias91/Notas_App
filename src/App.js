@@ -1,50 +1,32 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Nav from '../src/components/NavBar';
 import Form from '../src/components/Form'
 import {todos} from '../src/Datos.json'
-import Todos from '../src//components/todos'
+import Todos from '../src/components/todos'
 
-console.log(todos)
+export default function App(){
 
-class App extends React.Component{
+    const [estado, setEstado] = useState(todos);
 
-  constructor(){
-    super();
-    this.state = {
-      todos
-  }
-  this.addTodos = this.addTodos.bind(this);
+function addTodos(todo){
+  setEstado([...estado, todo]
+  )
+}
+
+function removeTodo(index){
+  
+  setEstado(estado.filter((e,i) => i !== index)
+  )
 }
 
 
-addTodos(todo){
-
-  this.setState({
-    todos : [...this.state.todos, todo]
-  })
-}
-
-removeTodo(index){
-  if(window.confirm("Estas seguro de eliminar la tarea?")){
-    this.setState({
-      todos : this.state.todos.filter((e,i) => {
-        return i != index
-      })
-    })
-  }
-}
-
-
-
-
-  render(){
     return(
       <div className="App">
       
         <div>
-          <Nav inf = {this.state.todos.length}/>
+          <Nav inf = {estado.length}/>
         </div>
 
         <div className="container">
@@ -53,11 +35,16 @@ removeTodo(index){
 
            <div className="col-md-4">
            <img src={logo} className="App-logo" alt="logo" />
-           <Form addTodo = {this.addTodos}/>
+           <Form 
+           addTodo = {addTodos}
+           />
            </div>
 
            <div className="col-md-8">
-          <Todos status={this.state.todos} remover={this.removeTodo}/>
+          <Todos 
+            status={estado} 
+            remove={removeTodo}
+          />
         </div>
         </div>
         </div>
@@ -65,8 +52,3 @@ removeTodo(index){
     </div>
     )
   }
-}
-
-
-
-export default App;

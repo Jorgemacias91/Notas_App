@@ -69,9 +69,9 @@ class Form extends React.Component{
                     onChange={this.hInput}
                     className="form-control"
                     >
-                        <option>Low</option>
-                        <option>Mediwn</option>
-                        <option>Higth</option>
+                        <option>Bajo</option>
+                        <option>Medio</option>
+                        <option>Alto</option>
 
                     </select>
 
