@@ -16,9 +16,9 @@ function addTodos(todo){
 }
 
 function removeTodo(index){
-  
-  setEstado(estado.filter((e,i) => i !== index)
-  )
+  if(window.confirm("Desea eliminar la tarea seleccionada?")){
+  setEstado(estado.filter((e,i) => i !== index))
+  }
 }
 
 
