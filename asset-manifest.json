@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Notas_App/static/css/main.49f9eb09.chunk.css",
-    "main.js": "/Notas_App/static/js/main.f4acbc3d.chunk.js",
-    "main.js.map": "/Notas_App/static/js/main.f4acbc3d.chunk.js.map",
+    "main.js": "/Notas_App/static/js/main.efade79b.chunk.js",
+    "main.js.map": "/Notas_App/static/js/main.efade79b.chunk.js.map",
     "runtime-main.js": "/Notas_App/static/js/runtime-main.e583afee.js",
     "runtime-main.js.map": "/Notas_App/static/js/runtime-main.e583afee.js.map",
     "static/js/2.e7974b29.chunk.js": "/Notas_App/static/js/2.e7974b29.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e583afee.js",
     "static/js/2.e7974b29.chunk.js",
     "static/css/main.49f9eb09.chunk.css",
-    "static/js/main.f4acbc3d.chunk.js"
+    "static/js/main.efade79b.chunk.js"
   ]
 }
